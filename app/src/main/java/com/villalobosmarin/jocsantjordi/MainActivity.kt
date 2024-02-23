@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,map_view::class.java)
             startActivity(intent)
         }
-//hola
+//hola adios
     }
 
 }
