@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:id="@android:id/background">
+            <shape>
+                <solid android:color="#C21807" /> <!-- Cambia este color al rojo deseado -->
+            </shape>
+        </item>
+        <item android:id="@android:id/progress">
+            <clip>
+                <shape>
+                    <solid android:color="#FF5722" /> <!-- Cambia este color al rojo deseado -->
+                </shape>
+            </clip>
+        </item>
+    </layer-list>
+
+</selector>

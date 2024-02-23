@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Games.Game04">
+
+
+    <ImageView
+        android:id="@+id/random_Images"
+        android:layout_width="485dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toTopOf="@+id/incorrectWordsGridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/caballero_image"
+        android:layout_width="328dp"
+        android:layout_height="227dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="48dp"
+        android:src="@drawable/caballero_cv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/dragon_image"
+        android:layout_width="349dp"
+        android:layout_height="235dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="555dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:src="@drawable/drac_cv"
+        app:layout_constraintEnd_toStartOf="@+id/caballero_image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dragonHealthTextView"
+        android:layout_width="121dp"
+        android:layout_height="85dp"
+        android:autoSizeTextType="uniform"
+        android:text="100"
+        app:layout_constraintBottom_toTopOf="@+id/dragon_image"
+        app:layout_constraintEnd_toEndOf="@+id/dragon_image"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/dragon_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/caballeroHealthTextView"
+        android:layout_width="112dp"
+        android:layout_height="80dp"
+        android:autoSizeTextType="uniform"
+        android:text="100"
+        app:layout_constraintBottom_toTopOf="@+id/caballero_image"
+        app:layout_constraintEnd_toEndOf="@+id/caballero_image"
+        app:layout_constraintStart_toStartOf="@+id/caballero_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/incorrectWordsGridLayout"
+        android:layout_width="1258dp"
+        android:layout_height="187dp"
+        android:layout_alignParentBottom="true"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/answer1"
+            android:layout_width="641dp"
+            android:layout_height="91dp"
+            android:backgroundTint="#E8AEAE"
+
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/answeer2"
+            android:layout_width="614dp"
+            android:layout_height="94dp"
+            android:backgroundTint="#E8AEAE"
+
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/answer3"
+            android:layout_width="637dp"
+            android:layout_height="88dp"
+            android:backgroundTint="#E8AEAE"
+
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/answer4"
+            android:layout_width="625dp"
+            android:layout_height="91dp"
+            android:backgroundTint="#E8AEAE"
+
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </GridLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/finishcv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="710dp"
+                android:layout_height="139dp"
+                android:layout_gravity="center"
+                android:text="¡ENHORABONA HAS GUANYAT UNA ESTRELLA"
+                android:textAlignment="center"
+                app:autoSizeTextType="uniform" />
+
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
+                app:srcCompat="@drawable/ic_star_on" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nextLevelButton"
+                android:layout_width="610dp"
+                android:layout_height="87dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#FFFFFFFF"
+                android:text="SEGUENT NIVELL"
+                app:autoSizeTextType="uniform" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
