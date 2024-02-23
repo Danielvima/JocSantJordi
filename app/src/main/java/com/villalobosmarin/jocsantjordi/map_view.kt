@@ -13,6 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 import com.villalobosmarin.jocsantjordi.Games.Game02
 import com.villalobosmarin.jocsantjordi.Games.Game04
+import com.villalobosmarin.jocsantjordi.bookReader.BookReader
 
 class map_view : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +26,12 @@ class map_view : AppCompatActivity() {
 
 
 
+        val bookImageView = findViewById<ImageView>(R.id.imageView19)
 
+        bookImageView.setOnClickListener {
+            val intent = Intent(this, BookReader::class.java)
+            startActivity(intent)
+        }
 
         val Buttonlvl1 = findViewById<Button>(R.id.Btnlvl1)
         val Buttonlvl2 = findViewById<Button>(R.id.Btnlvl2)
