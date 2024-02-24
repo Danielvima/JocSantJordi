@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bookReader.BookReader">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/prevBtn"
+        android:layout_width="128dp"
+        android:layout_height="90dp"
+        android:textSize="50dp"
+        android:backgroundTint="#BADAB3"
+        android:text="anterior"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/avBtn"
+        android:layout_width="128dp"
+        android:layout_height="90dp"
+        android:textSize="50dp"
+        android:text="seguent"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#BADAB3"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="108dp"
+        android:layout_height="110dp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#00FFF7F7"
+        android:text="X"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:id="@+id/ll1"
+        android:layout_height="676dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="1310dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:srcCompat="@drawable/book_page1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="50dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_marginTop="95dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="25dp"
+                android:text="COM ESTÀS, PETIT AMIC?" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="25dp"
+
+                android:text="VOLS LLEGIR UN CONTE BONIC?" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:textSize="25dp"
+                android:text="VOLS SABER QUÈ VA PASSAR A LES TERRES DE MONTBLANC?" />
+
+            <TextView
+                android:layout_marginTop="150dp"
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:textSize="25dp"
+                android:text="A MONTBLANC, FA MOLT DE TEMPS, TOTS VIVIEN MOLT CONTENTS." />
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:textSize="25dp"
+                android:text="A MONTBLANC TOTHOM VIVIA FELIÇ, EN PAU I HARMONIA." />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:layout_height="676dp"
+        android:id="@+id/ll2"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/page_2"
+            android:layout_width="1150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:srcCompat="@drawable/page_2" />
+
+        <LinearLayout
+            android:layout_width="807dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="50dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginTop="100dp"
+                android:text="FINS QUE AL POBLE VA ARRIBAR UN MONSTRE LLEIG I DOLENT, UN DRAC MALVAT I VIOLENT QUE TOTHOM VA ESGARRIFAR."
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="100dp"
+                android:text="VIVIA DINS D'UNA COVA DE MUNTANYA, A PORP DEL LLAC I NINGÚ MAI NO GOSAVA FICAR-SE AMB AQUELL DRAC."
+                android:textSize="25dp" />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:layout_height="676dp"
+        android:orientation="horizontal"
+        android:id="@+id/ll3"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="1150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            app:srcCompat="@drawable/page3" />
+
+        <LinearLayout
+            android:layout_width="807dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="50dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginTop="100dp"
+                android:text="—SI NO EM DÓNES ALIMENT A TOTHOM EM MENJARÈ I EL TEU REGNE DESTRUIRÉ                                       —VA DIR EL MOSNTRE PESTILENT"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="100dp"
+                android:text="ARROGANT I AMB GROLLERIA TOT SEGUIT VA AMENAÇAR:                  —VULL QUE EM DONIS CADA DIA DEL TEU REGNE A UN CIUTADÀ"
+                android:textSize="25dp" />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:layout_height="676dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:id="@+id/ll4"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            app:srcCompat="@drawable/page4" />
+
+        <LinearLayout
+            android:layout_width="807dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="50dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginTop="100dp"
+                android:text="SER MENJAT PER UN DRAC LLEIG? NO SÉ JO QUI HI ANIRÀ...                                    ÉS BEN CLAR, NINGÚ HO VOLDRÀ! I SI HO FÉSSIM PER SORTEIG?"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="100dp"
+                android:text="VAN FICAR DINS D'UNA OLLA TOTS ELS NOMS DELS CIUTADANS PER SABER QUI DE LA COLLA HAURÀ D'ANAR-SE'N ABANS."
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:layout_height="676dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:id="@+id/ll5"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            app:srcCompat="@drawable/page5" />
+
+        <LinearLayout
+            android:layout_width="807dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="50dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginTop="100dp"
+                android:text="UN DIA EL POBLE ES VA OMPLIR D'AMARGOR I TRISTESA: AQUELL DIA VA SORTIR JUST EL NOM DE LA PRINCESA"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="100dp"
+                android:text="—NO PLOREU—VA DIR LA JOVE—.           JO NO SÓC PAS DIFERENT DE LA RESTA DE LA GENT.   HO FARÉ, ANIRÉ A LA COVA."
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:layout_height="676dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:id="@+id/ll6"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            app:srcCompat="@drawable/page6" />
+
+        <LinearLayout
+            android:layout_width="807dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="50dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginTop="100dp"
+                android:text="QUAN LA NOVIA VA ARRIBAR EL DRAC CONTENT EXLAMÀ:                                      —AVUI FARÉ UN BON ROSTIT PER AL SOPAR D'AQUESTA NIT!"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="100dp"
+                android:text="VA ARRIBAR EN AQUELL MOMENT SANT JORDI, CAVALLER VALENT, AMB EL SEU CAVALL BEN BLANC, A LES TERRES DE MONTBLANC"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:layout_height="676dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:id="@+id/ll7"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            app:srcCompat="@drawable/page7" />
+
+        <LinearLayout
+            android:layout_width="807dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="50dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginTop="100dp"
+                android:text="I SANT JORDI LI VA FER A LA NOIA UNA PROMESA:                                                         —NO TEMEU, BELLA PRINCESA, QUE DEL DRAC JO US SALVARÉ."
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="100dp"
+                android:text="—VINE, VINE, DRAC DOLENT, I PREPARA'T PER COMBAT. QUÈ ÉS AIXÒ DE SER MALVAT I ESPANTAR SEMPRE A LA GENT?"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:layout_height="676dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:id="@+id/ll8"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            app:srcCompat="@drawable/page8" />
+
+        <LinearLayout
+            android:layout_width="807dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginTop="100dp"
+                android:text="—QUIN ALÈ QUE TÉ AQUEST DRAC! ÉS TERRIBLE I FASTIGÓS! QUE POTSER FUMES TABAC, MONSTRE LLEIG I BERRUGÓS?"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="100dp"
+                android:text="DURANT HORES VAN LLUITAR FINS QUE EN JORDI VA GUANYAR. —CAU A TERRA, MONSTRE, CAU, DEIXA JA AQUEST POBLE EN PAU!"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:layout_height="676dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:id="@+id/ll9"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            app:srcCompat="@drawable/page9" />
+
+        <LinearLayout
+            android:layout_width="807dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="50dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginTop="100dp"
+                android:text="AIXÍ, PER ACTE DE NOBLESA, L'HOME BO, SAVI I VALENT VA SALVAR A UNA PRINCESA D'AQUELL MONSTRE PESTILENT"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="100dp"
+                android:text="ABATUT SOBRE EL TERRAL PER SANT JORDI, EL CAVALLER, DE LA SANG DE L'ANIMAL VA SORTIR UN BONIC ROSER."
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:layout_height="676dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:id="@+id/ll10"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            app:srcCompat="@drawable/page10" />
+
+        <LinearLayout
+            android:layout_width="807dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginTop="100dp"
+                android:text="AMB AFECTE I AMB TENDRESA LI OFERÍ A LA PRINCESA: —AQUESTA ROSA VERMELLA PER A TU, DOLÇA DONZELLA."
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="100dp"
+                android:text="— I ARA COM T'HO HE D'AGRAIR? ENCISAT PER LA NOBLESA, EL REI, FELIÇ, LI OFERÍ ESPOSAR-SE AMB LA PRINCESA"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="1124dp"
+        android:layout_height="676dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible"
+        android:id="@+id/ll11"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="952dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleX="1.4"
+            android:scaleY="1.4"
+            app:srcCompat="@drawable/page11" />
+
+        <LinearLayout
+            android:layout_width="807dp"
+            android:paddingLeft="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="253dp"
+                android:layout_marginTop="100dp"
+                android:text="—QUIN HONOR, SA MAJESTAT... PERÒ NO HO PUC PAS ACCEPTAR. HE DE CONTINUAR EL CAMÍ PER SEGUIR EL MEU DESTÍ."
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="100dp"
+                android:text="I AMB AQUESTA CLOENDA VA ACABAR LA LLEGENDA D'UN CAVALLER BO I NOBLE QUE VA SALVAR TOT UN POBLE."
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
