@@ -18,7 +18,7 @@ class BookReader : AppCompatActivity() {
         setContentView(R.layout.activity_book_reader)
 
 
-
+//cositas
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
             val intent = Intent(this, map_view::class.java)
