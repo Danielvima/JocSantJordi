@@ -17,14 +17,12 @@ class BookReader : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_reader)
 
-
-//cositas
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
             val intent = Intent(this, map_view::class.java)
             startActivity(intent)
         }
-        // Inicializar array con los layouts
+
         layouts = arrayOf(
             findViewById(R.id.ll1),
             findViewById(R.id.ll2),
@@ -37,10 +35,7 @@ class BookReader : AppCompatActivity() {
             findViewById(R.id.ll9),
             findViewById(R.id.ll10),
             findViewById(R.id.ll11),
-
-
-            // Agrega aquí todos los LinearLayout que necesitas controlar
-        )
+            )
 
         // Mostrar el primer layout, ocultar los demás
         showLayout(currentLayoutIndex)

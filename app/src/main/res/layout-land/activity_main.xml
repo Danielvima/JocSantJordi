@@ -9,38 +9,37 @@
 
     <Button
         android:id="@+id/btnJugar"
-        android:layout_width="443dp"
-        android:layout_height="101dp"
+        android:layout_width="450dp"
+        android:layout_height="120dp"
         android:autoSizeTextType="uniform"
         android:backgroundTint="#F9BF55"
         android:text="JUGAR"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
+        app:layout_constraintVertical_bias="0.898" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="739dp"
         android:layout_height="219dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="36dp"
         android:autoSizeTextType="uniform"
         android:text="@string/la_llegenda_de_sant_jordi"
         android:textColor="@color/black"
         android:textSize="50dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/btnConfig"
-        android:layout_width="100dp"
-        android:layout_height="93dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="28dp"
         android:background="@drawable/cuadro"
@@ -50,13 +49,13 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="100dp"
-        android:layout_height="93dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginEnd="28dp"
         android:background="@drawable/cuadro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnConfig"
-        app:layout_constraintVertical_bias="0.086"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/archivement_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

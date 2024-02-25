@@ -3,12 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView15"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginBottom="4dp"
@@ -18,14 +16,16 @@
         android:scaleType="fitCenter"
         android:src="@drawable/caballero"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/playButton"
+        app:layout_constraintEnd_toStartOf="@+id/playButton4"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/reloadImage" />
+        app:layout_constraintStart_toEndOf="@+id/reloadImage4" />
 
     <ImageView
-        android:id="@+id/reloadImage"
+        android:id="@+id/reloadImage4"
         android:layout_width="300dp"
         android:layout_height="300dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_weight="1"
         android:adjustViewBounds="true"
         android:padding="8dp"
@@ -35,21 +35,21 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/dialogTitle"
+        android:id="@+id/dialogTitle4"
         android:layout_width="0dp"
         android:layout_height="400dp"
-        android:text="VENCE AL DRAGON ACERTANDO LOS NOMBRE"
+        android:text="RELLENA LOS ESPACIOS VACIOS"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/playButton"
+        android:id="@+id/playButton4"
         android:layout_width="300dp"
         android:layout_height="120dp"
         android:layout_marginEnd="28dp"
@@ -61,6 +61,4 @@
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-

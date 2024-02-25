@@ -22,6 +22,9 @@
             android:name=".Games.Game02"
             android:exported="false" />
         <activity
+            android:name=".Games.Game01"
+            android:exported="false" />
+        <activity
             android:name=".map_view"
             android:exported="false" />
         <activity

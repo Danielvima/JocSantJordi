@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="597dp"
         android:layout_height="334dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="232dp"
         android:backgroundTint="#DCD9D9"
         app:cardCornerRadius="60dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,21 +115,12 @@
 
             <ImageButton
                 android:id="@+id/imageButton9"
-                android:layout_width="57dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/cicrcle"
-                app:srcCompat="@drawable/baseline_house_24" />
-
-            <ImageButton
-                android:id="@+id/imageButton11"
-                android:layout_width="49dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-
-                android:background="@drawable/greencircle"
-                app:srcCompat="@drawable/baseline_check_24" />
+                app:srcCompat="@drawable/ic_home" />
 
 
         </LinearLayout>

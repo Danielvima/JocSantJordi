@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_madera"
     tools:context=".bookReader.BookReader">
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/prevBtn"
-        android:layout_width="170dp"
-        android:layout_height="90dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:autoSizeTextType="uniform"
         android:backgroundTint="#FFC107"
         android:text="anterior"
@@ -20,8 +21,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/avBtn"
-        android:layout_width="170dp"
-        android:layout_height="90dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:autoSizeTextType="uniform"
         android:backgroundTint="#FFC107"
         android:text="seguent"
@@ -32,10 +33,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
-        android:layout_width="108dp"
-        android:layout_height="110dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="#00FFF7F7"
+        android:background="@drawable/cuadro"
+        android:backgroundTint="#8BC34A"
         android:text="X"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,14 +45,15 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
-        android:layout_width="1124dp"
         android:id="@+id/ll1"
+        android:layout_width="1124dp"
         android:layout_height="676dp"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -66,47 +69,47 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="50dp"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:paddingLeft="50dp">
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_marginTop="95dp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:textSize="25dp"
-                android:text="COM ESTÀS, PETIT AMIC?" />
+                android:layout_marginTop="95dp"
+                android:text="COM ESTÀS, PETIT AMIC?"
+                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:textSize="25dp"
+                android:text="VOLS LLEGIR UN CONTE BONIC?"
 
-                android:text="VOLS LLEGIR UN CONTE BONIC?" />
+                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
-                android:textSize="25dp"
-                android:text="VOLS SABER QUÈ VA PASSAR A LES TERRES DE MONTBLANC?" />
+                android:text="VOLS SABER QUÈ VA PASSAR A LES TERRES DE MONTBLANC?"
+                android:textSize="25dp" />
 
             <TextView
-                android:layout_marginTop="150dp"
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
-                android:textSize="25dp"
-                android:text="A MONTBLANC, FA MOLT DE TEMPS, TOTS VIVIEN MOLT CONTENTS." />
+                android:layout_marginTop="150dp"
+                android:text="A MONTBLANC, FA MOLT DE TEMPS, TOTS VIVIEN MOLT CONTENTS."
+                android:textSize="25dp" />
+
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="61dp"
-                android:textSize="25dp"
-                android:text="A MONTBLANC TOTHOM VIVIA FELIÇ, EN PAU I HARMONIA." />
-
+                android:text="A MONTBLANC TOTHOM VIVIA FELIÇ, EN PAU I HARMONIA."
+                android:textSize="25dp" />
 
 
         </LinearLayout>
@@ -114,20 +117,17 @@
     </LinearLayout>
 
 
-
-
-
-
     <LinearLayout
+        android:id="@+id/ll2"
         android:layout_width="1124dp"
         android:layout_height="676dp"
-        android:id="@+id/ll2"
 
+        android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -144,9 +144,9 @@
             android:layout_width="807dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="50dp"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:paddingLeft="50dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -163,28 +163,22 @@
                 android:textSize="25dp" />
 
 
-
-
         </LinearLayout>
 
     </LinearLayout>
 
 
-
-
-
-
-
     <LinearLayout
+        android:id="@+id/ll3"
         android:layout_width="1124dp"
         android:layout_height="676dp"
-        android:orientation="horizontal"
-        android:id="@+id/ll3"
+        android:background="#FFFFFF"
 
+        android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -200,9 +194,9 @@
             android:layout_width="807dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="50dp"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:paddingLeft="50dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -219,25 +213,22 @@
                 android:textSize="25dp" />
 
 
-
-
         </LinearLayout>
 
     </LinearLayout>
 
 
-
-
     <LinearLayout
+        android:id="@+id/ll4"
         android:layout_width="1124dp"
         android:layout_height="676dp"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        android:id="@+id/ll4"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -253,9 +244,9 @@
             android:layout_width="807dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="50dp"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:paddingLeft="50dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -277,18 +268,17 @@
     </LinearLayout>
 
 
-
-
     <LinearLayout
+        android:id="@+id/ll5"
         android:layout_width="1124dp"
         android:layout_height="676dp"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        android:id="@+id/ll5"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -304,9 +294,9 @@
             android:layout_width="807dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="50dp"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:paddingLeft="50dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -329,15 +319,16 @@
 
 
     <LinearLayout
+        android:id="@+id/ll6"
         android:layout_width="1124dp"
         android:layout_height="676dp"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        android:id="@+id/ll6"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -353,9 +344,9 @@
             android:layout_width="807dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="50dp"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:paddingLeft="50dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -377,17 +368,17 @@
     </LinearLayout>
 
 
-
     <LinearLayout
+        android:id="@+id/ll7"
         android:layout_width="1124dp"
         android:layout_height="676dp"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        android:id="@+id/ll7"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -403,9 +394,9 @@
             android:layout_width="807dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="50dp"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:paddingLeft="50dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -428,15 +419,16 @@
 
 
     <LinearLayout
+        android:id="@+id/ll8"
         android:layout_width="1124dp"
         android:layout_height="676dp"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        android:id="@+id/ll8"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -452,8 +444,8 @@
             android:layout_width="807dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="50dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="50dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -475,15 +467,16 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll9"
         android:layout_width="1124dp"
         android:layout_height="676dp"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        android:id="@+id/ll9"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -499,9 +492,9 @@
             android:layout_width="807dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="50dp"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:paddingLeft="50dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -523,15 +516,16 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll10"
         android:layout_width="1124dp"
         android:layout_height="676dp"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="gone"
-        android:id="@+id/ll10"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -547,8 +541,8 @@
             android:layout_width="807dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="50dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="50dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -571,15 +565,16 @@
 
 
     <LinearLayout
+        android:id="@+id/ll11"
         android:layout_width="1124dp"
         android:layout_height="676dp"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:visibility="visible"
-        android:id="@+id/ll11"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -593,10 +588,10 @@
 
         <LinearLayout
             android:layout_width="807dp"
-            android:paddingLeft="50dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="50dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -616,31 +611,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
