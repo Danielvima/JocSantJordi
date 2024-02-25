@@ -9,24 +9,26 @@ import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.GridLayout
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.villalobosmarin.jocsantjordi.MainActivity
 import com.villalobosmarin.jocsantjordi.R
 import com.villalobosmarin.jocsantjordi.map_view
 
 class Game04 : AppCompatActivity() {
 
     private val imagesAndWords = mapOf(
-        R.drawable.drac_cv to "Drac",
-        R.drawable.princesa_1 to "Princesa",
-        R.drawable.caballero_cv to "SantJordi",
-        R.drawable.rosa_cv to "Rosa",
-        R.drawable.book to "Llibre"
+        R.drawable.drac_cv to "DRAC",
+        R.drawable.princesa_1 to "PRINCESA",
+        R.drawable.caballero_cv to "SANTJORDI",
+        R.drawable.rosa_cv to "ROSA",
+        R.drawable.book_btn to "LLIBRE"
     )
 
-    private val incorrectWords = listOf("Prrincesa", "SatJoi", "Drhrac", "Rossa", "Llibro")
+    private val incorrectWords = listOf("CASA", "PILOTA", "JOC", "ARBRE", "GOS")
     private lateinit var answerButtons: List<Button>
     private lateinit var randomImageView: ImageView
     private lateinit var dragonHealthTextView: TextView
@@ -40,6 +42,13 @@ class Game04 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game04)
+
+        val btnHome = findViewById<ImageButton>(R.id.btnHome_game04)
+
+        btnHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         answerButtons = listOf(
             findViewById(R.id.answer1),
@@ -71,10 +80,8 @@ class Game04 : AppCompatActivity() {
             answerButtons[i].text = words[i]
             answerButtons[i].setOnClickListener {
                 if (answerButtons[i].text == correctWord) {
-                    // Respuesta correcta
                     reduceDragonHealth()
                 } else {
-                    // Respuesta incorrecta
                     reduceCaballeroHealth()
                 }
                 showNextRandomImage()
@@ -90,7 +97,6 @@ class Game04 : AppCompatActivity() {
             finishcv.visibility = View.VISIBLE
             val nextLevelButton = findViewById<Button>(R.id.nextLevelButton)
             nextLevelButton.setOnClickListener {
-                // Ir al map_view
                 val intent = Intent(this, map_view::class.java)
                 startActivity(intent)
             }

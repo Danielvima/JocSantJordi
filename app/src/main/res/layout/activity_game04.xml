@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_combate"
     tools:context=".Games.Game04">
+
+
+    <ImageButton
+        android:id="@+id/btnHome_game04"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cuadro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_return" />
 
 
     <ImageView
@@ -18,35 +30,34 @@
         android:scaleY="2"
         app:layout_constraintBottom_toTopOf="@+id/incorrectWordsGridLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.596"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.969" />
 
     <ImageView
         android:id="@+id/caballero_image"
-        android:layout_width="328dp"
-        android:layout_height="227dp"
+        android:layout_width="200dp"
+        android:layout_height="235dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="88dp"
         android:src="@drawable/caballero_cv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <ImageView
         android:id="@+id/dragon_image"
-        android:layout_width="349dp"
+        android:layout_width="200dp"
         android:layout_height="235dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="148dp"
         android:layout_marginEnd="555dp"
         android:scaleX="2"
         android:scaleY="2"
         android:src="@drawable/drac_cv"
         app:layout_constraintEnd_toStartOf="@+id/caballero_image"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,6 +66,7 @@
         android:layout_width="121dp"
         android:layout_height="85dp"
         android:autoSizeTextType="uniform"
+        android:background="#FFFFFF"
         android:text="100"
         app:layout_constraintBottom_toTopOf="@+id/dragon_image"
         app:layout_constraintEnd_toEndOf="@+id/dragon_image"
@@ -67,6 +79,7 @@
         android:layout_width="112dp"
         android:layout_height="80dp"
         android:autoSizeTextType="uniform"
+        android:background="#FFFFFF"
         android:text="100"
         app:layout_constraintBottom_toTopOf="@+id/caballero_image"
         app:layout_constraintEnd_toEndOf="@+id/caballero_image"
@@ -76,7 +89,7 @@
     <GridLayout
         android:id="@+id/incorrectWordsGridLayout"
         android:layout_width="1258dp"
-        android:layout_height="187dp"
+        android:layout_height="200dp"
         android:layout_alignParentBottom="true"
         android:alignmentMode="alignMargins"
         android:columnCount="2"
@@ -89,45 +102,45 @@
         <Button
             android:id="@+id/answer1"
             android:layout_width="641dp"
-            android:layout_height="91dp"
-            android:backgroundTint="#E8AEAE"
-
+            android:layout_height="100dp"
+            android:backgroundTint="#FDD353"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform" />
 
 
         <Button
             android:id="@+id/answeer2"
             android:layout_width="614dp"
-            android:layout_height="94dp"
-            android:backgroundTint="#E8AEAE"
-
+            android:layout_height="100dp"
+            android:backgroundTint="#FCD253"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform" />
 
 
         <Button
             android:id="@+id/answer3"
             android:layout_width="637dp"
-            android:layout_height="88dp"
-            android:backgroundTint="#E8AEAE"
-
+            android:layout_height="100dp"
+            android:backgroundTint="#FCD253"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform" />
 
 
         <Button
             android:id="@+id/answer4"
-            android:layout_width="625dp"
-            android:layout_height="91dp"
-            android:backgroundTint="#E8AEAE"
-
+            android:layout_width="614dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#FCD253"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform" />
 
     </GridLayout>
 
@@ -137,9 +150,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
+        android:visibility="gone"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -171,16 +184,13 @@
                 android:layout_width="610dp"
                 android:layout_height="87dp"
                 android:layout_gravity="center"
-                android:backgroundTint="#FFFFFFFF"
+                android:backgroundTint="#FFC107"
                 android:text="SEGUENT NIVELL"
                 app:autoSizeTextType="uniform" />
 
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

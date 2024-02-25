@@ -38,7 +38,7 @@
         android:id="@+id/dialogTitle"
         android:layout_width="0dp"
         android:layout_height="400dp"
-        android:text="ALIMENTA AL DRAGON CON SACRIFICIOS HUMANOS EN EL ALTAR SUMANDO LOS QUE TE PIDA"
+        android:text="ALIMENTA AL DRAGON SUMANDO LO QUE TE PIDA"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
@@ -50,13 +50,15 @@
 
     <Button
         android:id="@+id/playButton"
-        android:layout_width="211dp"
-        android:layout_height="102dp"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="24dp"
+        android:backgroundTint="#4CAF50"
         android:text="JUGAR"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

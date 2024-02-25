@@ -4,15 +4,14 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import androidx.cardview.widget.CardView
+import com.villalobosmarin.jocsantjordi.Games.Game01
 import com.villalobosmarin.jocsantjordi.Games.Game02
 import com.villalobosmarin.jocsantjordi.Games.Game04
+import com.villalobosmarin.jocsantjordi.Games.Game05
 import com.villalobosmarin.jocsantjordi.bookReader.BookReader
 
 class map_view : AppCompatActivity() {
@@ -20,11 +19,8 @@ class map_view : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map_view)
 
-
         val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val stars = sharedPrefs.getInt("stars", 0)
-
-
 
         val bookImageView = findViewById<ImageView>(R.id.imageView19)
 
@@ -37,6 +33,7 @@ class map_view : AppCompatActivity() {
         val Buttonlvl2 = findViewById<Button>(R.id.Btnlvl2)
         val Buttonlvl3 = findViewById<Button>(R.id.Btnlvl3)
         val Buttonlvl4 = findViewById<Button>(R.id.Btnlvl4)
+        val Buttonlvl5 = findViewById<Button>(R.id.Btnlvl5)
         val btnHome = findViewById<ImageButton>(R.id.btnHome)
 
         Buttonlvl1.setOnClickListener {
@@ -44,7 +41,6 @@ class map_view : AppCompatActivity() {
         }
 
         Buttonlvl2.setOnClickListener {
-            // Muestra el diálogo y luego inicia el juego
             showGameDialog02("NIVEL 2")
         }
 
@@ -54,6 +50,10 @@ class map_view : AppCompatActivity() {
 
         Buttonlvl4.setOnClickListener {
             showGameDialog04("NIVEL 4")
+        }
+
+        Buttonlvl5.setOnClickListener {
+            showGameDialog05("NIVEL 5")
         }
 
         btnHome.setOnClickListener {
@@ -71,6 +71,10 @@ class map_view : AppCompatActivity() {
 
         dialogView.findViewById<Button>(R.id.playButton).setOnClickListener {
             dialog.dismiss()
+
+            // Inicia la actividad Game01
+            val intent = Intent(this@map_view, Game01::class.java)
+            startActivity(intent)
         }
 
         dialog.show()
@@ -83,11 +87,8 @@ class map_view : AppCompatActivity() {
             .setTitle(title)
         val dialog = dialogBuilder.create()
 
-
-
         val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val starFilled = sharedPrefs.getBoolean("starFilled", false)
-
 
         val starImageView = dialogView.findViewById<ImageView>(R.id.starView)
         if (starFilled) {
@@ -144,6 +145,24 @@ class map_view : AppCompatActivity() {
 
             // Inicia la actividad Game04
             val intent = Intent(this@map_view, Game04::class.java)
+            startActivity(intent)
+        }
+
+        dialog.show()
+    }
+
+    private fun showGameDialog05(title: String) {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_game05, null)
+        val dialogBuilder = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .setTitle(title)
+        val dialog = dialogBuilder.create()
+
+        dialogView.findViewById<Button>(R.id.playButton4).setOnClickListener {
+            dialog.dismiss()
+
+            // Inicia la actividad Game05
+            val intent = Intent(this@map_view, Game05::class.java)
             startActivity(intent)
         }
 

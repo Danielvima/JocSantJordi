@@ -7,9 +7,11 @@ import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.GridLayout
+import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.villalobosmarin.jocsantjordi.MainActivity
 import com.villalobosmarin.jocsantjordi.R
 import com.villalobosmarin.jocsantjordi.map_view
 
@@ -32,6 +34,13 @@ class Game02 : AppCompatActivity() {
         setContentView(R.layout.activity_game02)
 
         initializeGame()
+
+        val btnHome = findViewById<ImageButton>(R.id.btnHome_game02)
+
+        btnHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initializeGame() {

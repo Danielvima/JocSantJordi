@@ -4,15 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_madera"
     tools:context=".Games.Game02">
+
+    <ImageButton
+        android:id="@+id/btnHome_game02"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cuadro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_return" />
 
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="975dp"
         android:layout_height="641dp"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="20dp"
         android:alignmentMode="alignMargins"
+        android:background="#FFFFFF"
         android:columnCount="4"
         android:columnOrderPreserved="false"
         android:padding="8dp"
@@ -20,10 +33,10 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59000003">
+        app:layout_constraintVertical_bias="0.611">
 
         <!-- Carta 1 -->
         <ImageView
@@ -50,7 +63,7 @@
             android:onClick="onCardClicked"
             android:scaleType="fitCenter"
             android:src="@drawable/card_back"
-            android:tag="1"/>
+            android:tag="1" />
 
         <!-- Carta 3 -->
         <ImageView
@@ -63,7 +76,7 @@
             android:onClick="onCardClicked"
             android:scaleType="fitCenter"
             android:src="@drawable/card_back"
-            android:tag="2"/>
+            android:tag="2" />
 
         <!-- Carta 4 -->
         <ImageView
@@ -76,7 +89,7 @@
             android:onClick="onCardClicked"
             android:scaleType="fitCenter"
             android:src="@drawable/card_back"
-            android:tag="1"/>
+            android:tag="1" />
 
         <!-- Carta 5 -->
         <ImageView
@@ -89,7 +102,7 @@
             android:onClick="onCardClicked"
             android:scaleType="fitCenter"
             android:src="@drawable/card_back"
-            android:tag="2"/>
+            android:tag="2" />
 
         <!-- Carta 6 -->
         <ImageView
@@ -102,7 +115,7 @@
             android:onClick="onCardClicked"
             android:scaleType="fitCenter"
             android:src="@drawable/card_back"
-            android:tag="3"/>
+            android:tag="3" />
 
         <!-- Carta 7 -->
         <ImageView
@@ -115,7 +128,7 @@
             android:onClick="onCardClicked"
             android:scaleType="fitCenter"
             android:src="@drawable/card_back"
-            android:tag="3"/>
+            android:tag="3" />
 
         <!-- Carta 8 -->
         <ImageView
@@ -128,9 +141,7 @@
             android:onClick="onCardClicked"
             android:scaleType="fitCenter"
             android:src="@drawable/card_back"
-            android:tag="0"/>
-
-
+            android:tag="0" />
 
 
     </GridLayout>
@@ -142,8 +153,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:backgroundTint="#FFFFFF"
         android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFFFFF"
         android:visibility="gone"
         app:cardCornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -177,16 +188,13 @@
                 android:layout_width="610dp"
                 android:layout_height="87dp"
                 android:layout_gravity="center"
-                android:backgroundTint="#FFFFFFFF"
+                android:backgroundTint="#FFC107"
                 android:text="SEGUENT NIVELL"
                 app:autoSizeTextType="uniform" />
 
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
