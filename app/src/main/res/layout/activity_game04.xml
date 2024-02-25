@@ -18,10 +18,10 @@
         android:scaleY="2"
         app:layout_constraintBottom_toTopOf="@+id/incorrectWordsGridLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.973" />
 
     <ImageView
         android:id="@+id/caballero_image"
@@ -76,7 +76,7 @@
     <GridLayout
         android:id="@+id/incorrectWordsGridLayout"
         android:layout_width="1258dp"
-        android:layout_height="187dp"
+        android:layout_height="200dp"
         android:layout_alignParentBottom="true"
         android:alignmentMode="alignMargins"
         android:columnCount="2"
@@ -89,9 +89,9 @@
         <Button
             android:id="@+id/answer1"
             android:layout_width="641dp"
-            android:layout_height="91dp"
-            android:backgroundTint="#E8AEAE"
-
+            android:layout_height="100dp"
+            android:backgroundTint="#FFC107"
+            app:autoSizeTextType="uniform"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -100,9 +100,9 @@
         <Button
             android:id="@+id/answeer2"
             android:layout_width="614dp"
-            android:layout_height="94dp"
-            android:backgroundTint="#E8AEAE"
-
+            android:layout_height="100dp"
+            android:backgroundTint="#FFC107"
+            app:autoSizeTextType="uniform"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -111,9 +111,9 @@
         <Button
             android:id="@+id/answer3"
             android:layout_width="637dp"
-            android:layout_height="88dp"
-            android:backgroundTint="#E8AEAE"
-
+            android:layout_height="100dp"
+            android:backgroundTint="#FFC107"
+            app:autoSizeTextType="uniform"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -121,10 +121,10 @@
 
         <Button
             android:id="@+id/answer4"
-            android:layout_width="625dp"
-            android:layout_height="91dp"
-            android:backgroundTint="#E8AEAE"
-
+            android:layout_width="614dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#FFC107"
+            app:autoSizeTextType="uniform"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -137,9 +137,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
+        android:visibility="gone"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -171,7 +171,7 @@
                 android:layout_width="610dp"
                 android:layout_height="87dp"
                 android:layout_gravity="center"
-                android:backgroundTint="#FFFFFFFF"
+                android:backgroundTint="#FFC107"
                 android:text="SEGUENT NIVELL"
                 app:autoSizeTextType="uniform" />
 

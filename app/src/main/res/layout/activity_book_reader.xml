@@ -9,23 +9,23 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/prevBtn"
-        android:layout_width="128dp"
+        android:layout_width="170dp"
         android:layout_height="90dp"
-        android:textSize="50dp"
-        android:backgroundTint="#BADAB3"
-        android:text="anterior"
         android:autoSizeTextType="uniform"
+        android:backgroundTint="#FFC107"
+        android:text="anterior"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/avBtn"
-        android:layout_width="128dp"
+        android:layout_width="170dp"
         android:layout_height="90dp"
-        android:textSize="50dp"
-        android:text="seguent"
         android:autoSizeTextType="uniform"
-        android:backgroundTint="#BADAB3"
+        android:backgroundTint="#FFC107"
+        android:text="seguent"
+        android:textSize="50dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

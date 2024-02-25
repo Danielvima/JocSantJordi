@@ -142,8 +142,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:backgroundTint="#FFFFFF"
         android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFFFFF"
         android:visibility="gone"
         app:cardCornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -177,7 +177,7 @@
                 android:layout_width="610dp"
                 android:layout_height="87dp"
                 android:layout_gravity="center"
-                android:backgroundTint="#FFFFFFFF"
+                android:backgroundTint="#FFC107"
                 android:text="SEGUENT NIVELL"
                 app:autoSizeTextType="uniform" />
 
