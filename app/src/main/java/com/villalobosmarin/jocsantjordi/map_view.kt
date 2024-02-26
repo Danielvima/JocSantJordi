@@ -10,6 +10,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import com.villalobosmarin.jocsantjordi.Games.Game01
 import com.villalobosmarin.jocsantjordi.Games.Game02
+import com.villalobosmarin.jocsantjordi.Games.Game03
 import com.villalobosmarin.jocsantjordi.Games.Game04
 import com.villalobosmarin.jocsantjordi.Games.Game05
 import com.villalobosmarin.jocsantjordi.bookReader.BookReader
@@ -118,6 +119,10 @@ class map_view : AppCompatActivity() {
 
         dialogView.findViewById<Button>(R.id.playButton).setOnClickListener {
             dialog.dismiss()
+
+            // Inicia la actividad Game03
+            val intent = Intent(this@map_view, Game03::class.java)
+            startActivity(intent)
         }
 
         dialog.show()

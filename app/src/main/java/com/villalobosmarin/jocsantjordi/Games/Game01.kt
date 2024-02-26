@@ -1,13 +1,17 @@
 package com.villalobosmarin.jocsantjordi.Games
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.villalobosmarin.jocsantjordi.MainActivity
 import com.villalobosmarin.jocsantjordi.R
+import com.villalobosmarin.jocsantjordi.map_view
 
 
 class Game01 : AppCompatActivity() {
@@ -35,11 +39,15 @@ class Game01 : AppCompatActivity() {
                 clickedImageView.visibility = View.GONE
                 currentTag--
                 if (currentTag == 0) {
-                    currentTag = 4
-                    imageView1.visibility = View.VISIBLE
-                    imageView2.visibility = View.VISIBLE
-                    imageView3.visibility = View.VISIBLE
-                    imageView4.visibility = View.VISIBLE
+                    showSuccessMessage()
+
+                    val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+
+                    val editor = sharedPrefs.edit()
+
+                    editor.putBoolean("starFilled", true)
+
+                    editor.apply()
                 }
             }
         }
@@ -48,6 +56,27 @@ class Game01 : AppCompatActivity() {
         imageView2.setOnClickListener(clickListener)
         imageView3.setOnClickListener(clickListener)
         imageView4.setOnClickListener(clickListener)
+    }
+
+    private fun showSuccessMessage() {
+
+        val congratsCardView = findViewById<CardView>(R.id.congratsCardView)
+        congratsCardView.visibility = View.VISIBLE
+        val nextLevelButton = findViewById<Button>(R.id.nextLevelButton)
+        nextLevelButton.setOnClickListener {
+            // Ir al map_view
+            val intent = Intent(this, map_view::class.java)
+            startActivity(intent)
+        }
+
+        val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val currentStars = sharedPrefs.getInt("stars", 0)
+        val updatedStars = currentStars + 1
+        with(sharedPrefs.edit()) {
+            putInt("stars", updatedStars)
+            apply()
+        }
+
     }
 }
 
