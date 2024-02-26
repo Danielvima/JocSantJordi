@@ -22,18 +22,18 @@
 
     <ImageView
         android:id="@+id/random_Images"
-        android:layout_width="485dp"
-        android:layout_height="250dp"
+        android:layout_width="445dp"
+        android:layout_height="301dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="52dp"
         android:scaleX="2"
         android:scaleY="2"
         app:layout_constraintBottom_toTopOf="@+id/incorrectWordsGridLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintHorizontal_bias="0.591"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.969" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/caballero_image"
@@ -63,11 +63,13 @@
 
     <TextView
         android:id="@+id/dragonHealthTextView"
-        android:layout_width="121dp"
-        android:layout_height="85dp"
+        android:layout_width="154dp"
+        android:layout_height="97dp"
         android:autoSizeTextType="uniform"
-        android:background="#FFFFFF"
+        android:background="#00FFFFFF"
         android:text="100"
+        android:textColor="#8E2424"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/dragon_image"
         app:layout_constraintEnd_toEndOf="@+id/dragon_image"
         app:layout_constraintHorizontal_bias="0.501"
@@ -76,11 +78,13 @@
 
     <TextView
         android:id="@+id/caballeroHealthTextView"
-        android:layout_width="112dp"
-        android:layout_height="80dp"
+        android:layout_width="154dp"
+        android:layout_height="97dp"
         android:autoSizeTextType="uniform"
-        android:background="#FFFFFF"
+        android:background="#00FFFFFF"
         android:text="100"
+        android:textStyle="bold"
+        android:textColor="#D7238318"
         app:layout_constraintBottom_toTopOf="@+id/caballero_image"
         app:layout_constraintEnd_toEndOf="@+id/caballero_image"
         app:layout_constraintStart_toStartOf="@+id/caballero_image"

@@ -25,7 +25,7 @@
         android:layout_marginStart="150dp"
         android:layout_marginTop="20dp"
         android:alignmentMode="alignMargins"
-        android:background="#FFFFFF"
+        android:background="#00FFFFFF"
         android:columnCount="4"
         android:columnOrderPreserved="false"
         android:padding="8dp"

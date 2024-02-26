@@ -38,7 +38,7 @@
         android:id="@+id/dialogTitle"
         android:layout_width="0dp"
         android:layout_height="400dp"
-        android:text="AYUDA AL PUEBLO A ORDENAR LOS ANIMALES SEGUN SU TAMAÑO"
+        android:text="AJUDA AL POBLE A ORDENAR ELS ANIMALS SEGONS EL SEU TAMANY"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"

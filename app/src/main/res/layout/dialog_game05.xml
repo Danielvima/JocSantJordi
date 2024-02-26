@@ -38,7 +38,7 @@
         android:id="@+id/dialogTitle4"
         android:layout_width="0dp"
         android:layout_height="400dp"
-        android:text="RELLENA LOS ESPACIOS VACIOS"
+        android:text="OMPLE ELS ESPAIS VUITS DE LA CANÇÓ"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
