@@ -85,35 +85,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/checkButton"
-        android:layout_width="258dp"
-        android:layout_height="152dp"
-        android:layout_marginBottom="64dp"
-        android:background="@drawable/cuadro"
-        android:text="VERIFICAR"
-        android:textSize="45dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.817"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animal1ImageView"
-        app:layout_constraintVertical_bias="1.0" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:text=""
-        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="50sp"
-        android:background="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.733"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="0.923" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/congratsCardView"
