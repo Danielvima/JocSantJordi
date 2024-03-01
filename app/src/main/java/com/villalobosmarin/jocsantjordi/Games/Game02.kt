@@ -21,7 +21,7 @@ class Game02 : AppCompatActivity() {
         R.drawable.caballero_cv,
         R.drawable.drac_cv,
         R.drawable.princesa_1,
-        R.drawable.rosa_cv
+        R.drawable.rei_cv
     )
 
     private var lastClickedCard: ImageView? = null

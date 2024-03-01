@@ -37,8 +37,8 @@
 
     <ImageView
         android:id="@+id/caballero_image"
-        android:layout_width="200dp"
-        android:layout_height="235dp"
+        android:layout_width="235dp"
+        android:layout_height="352dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="148dp"
         android:layout_marginEnd="88dp"

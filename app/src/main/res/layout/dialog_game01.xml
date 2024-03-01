@@ -8,31 +8,18 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="344dp"
-        android:layout_height="310dp"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:padding="8dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/caballero"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/playButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/starView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
         android:id="@+id/starView"
         android:layout_width="294dp"
         android:layout_height="316dp"
+        android:layout_marginBottom="16dp"
         android:layout_weight="1"
         android:adjustViewBounds="true"
         android:padding="8dp"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_star_off"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/playButton"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -43,11 +30,11 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/starView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309" />
+        app:layout_constraintVertical_bias="0.307" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/playButton"
