@@ -38,7 +38,7 @@
         android:id="@+id/dialogTitle"
         android:layout_width="0dp"
         android:layout_height="400dp"
-        android:text="VENCE AL DRAGON ACERTANDO LOS NOMBRE"
+        android:text="GUANYA AL DRAC ENDIVINANT EL NOM DE LES IMATGES"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"

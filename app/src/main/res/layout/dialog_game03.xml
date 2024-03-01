@@ -38,7 +38,7 @@
         android:id="@+id/dialogTitle"
         android:layout_width="0dp"
         android:layout_height="400dp"
-        android:text="ALIMENTA AL DRAGON SUMANDO LO QUE TE PIDA"
+        android:text="ALIMENTA AL DRAC AMB ELS ANIMALS QUE DEMANI"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"

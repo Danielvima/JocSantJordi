@@ -38,7 +38,7 @@
         android:id="@+id/dialogTitle"
         android:layout_width="0dp"
         android:layout_height="400dp"
-        android:text="ENCUENTRA LAS PAREJAS PARA GANAR ESTRELLAS"
+        android:text="TROBA LES PARELLES PER GUANYAR ESTRELLES"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
