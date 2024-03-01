@@ -9,9 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="344dp"
+        android:layout_height="310dp"
         android:layout_weight="1"
         android:adjustViewBounds="true"
         android:padding="8dp"
@@ -20,12 +19,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/playButton"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView3" />
+        app:layout_constraintStart_toEndOf="@+id/starView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:id="@+id/starView"
+        android:layout_width="294dp"
+        android:layout_height="316dp"
         android:layout_weight="1"
         android:adjustViewBounds="true"
         android:padding="8dp"
@@ -38,7 +39,7 @@
         android:id="@+id/dialogTitle"
         android:layout_width="0dp"
         android:layout_height="400dp"
-        android:text="AJUDA AL POBLE A ORDENAR ELS ANIMALS SEGONS EL SEU TAMANY"
+        android:text="ORDENA ELS ANIMALS PER EL TAMANY, DEL  MÉS GRAN FINS AL MÉS PETIT"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
@@ -48,17 +49,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.309" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/playButton"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
+        android:layout_width="298dp"
+        android:layout_height="160dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="#4CAF50"
+        android:background="@drawable/cuadro"
         android:text="JUGAR"
-        android:textSize="18sp"
+        android:textSize="60sp"
         android:textStyle="bold"
-        app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

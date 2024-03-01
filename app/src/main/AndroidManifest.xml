@@ -21,6 +21,9 @@
         <activity
             android:name=".Games.Game03"
             android:exported="false" />
+
+        <activity android:name=".Games.Game05" />
+
         <activity
             android:name=".Games.Game02"
             android:exported="false" />

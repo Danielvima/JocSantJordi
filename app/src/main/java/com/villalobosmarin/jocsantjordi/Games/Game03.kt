@@ -1,31 +1,32 @@
 package com.villalobosmarin.jocsantjordi.Games
 
-
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.villalobosmarin.jocsantjordi.R
+import com.villalobosmarin.jocsantjordi.map_view
 
-
-class Game03 : AppCompatActivity(){
+class Game03 : AppCompatActivity() {
 
     private lateinit var dragonImageView: ImageView
     private lateinit var animalImageViews: Array<ImageView>
-    private lateinit var checkButton: Button
+    private lateinit var textView: TextView
+    private lateinit var congratsCardView: CardView
 
-    private val animalImages = arrayOf(
-        R.drawable.drac_cv,
-        R.drawable.archivement_icon,
-        R.drawable.ic_pig,
-        R.drawable.ic_star_on,
-    )
+    private val animals = arrayOf("PORC", "CAVALL", "OVELLA", "GALLINA")
+    private var currentAnimalIndex = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game03)
 
+        // Initialize views
         dragonImageView = findViewById(R.id.dragonImageView)
         animalImageViews = arrayOf(
             findViewById(R.id.animal1ImageView),
@@ -33,31 +34,47 @@ class Game03 : AppCompatActivity(){
             findViewById(R.id.animal3ImageView),
             findViewById(R.id.animal4ImageView)
         )
-        checkButton = findViewById(R.id.checkButton)
+        textView = findViewById(R.id.textView)
+        congratsCardView = findViewById(R.id.congratsCardView)
 
-        checkButton.setOnClickListener {
-            playGame()
-        }
+        // Set initial text
+        textView.text = "VULL UN ${animals[currentAnimalIndex]}"
 
-        playGame()
-    }
-
-    private fun playGame() {
-        // Generar sumas aleatorias
-        val randomNumbers = List(2) { (0 until animalImages.size).random() }
-        val sum = randomNumbers.sum()
-
-        // Mostrar al usuario las imágenes correspondientes
-        dragonImageView.setImageResource(R.drawable.dragon_come)
-        for (i in animalImageViews.indices) {
-            val randomIndex = randomNumbers.getOrNull(i)
-            randomIndex?.let {
-                animalImageViews[i].setImageResource(animalImages[it])
+        // Set onClickListener for each animal ImageView
+        animalImageViews.forEachIndexed { index, imageView ->
+            imageView.setOnClickListener {
+                if (index == currentAnimalIndex) {
+                    hideCurrentAnimal()
+                    showNextAnimal()
+                } else {
+                    Toast.makeText(this, "Selecciona la imagen correcta", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 
-        // Mostrar la suma que el dragón está pidiendo
-        Toast.makeText(this, "Selecciona los animales que sumen $sum", Toast.LENGTH_SHORT).show()
+
+        // Set onClickListener for the nextLevelButton
+        val nextLevelButton = findViewById<Button>(R.id.nextLevelButton)
+        nextLevelButton.setOnClickListener {
+            val intent = Intent(this, map_view::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun hideCurrentAnimal() {
+        // Ocultar la imagen del animal actual
+        animalImageViews[currentAnimalIndex].visibility = View.GONE
+    }
+
+    private fun showNextAnimal() {
+        currentAnimalIndex++
+        if (currentAnimalIndex < animals.size) {
+            textView.text = "VULL UN ${animals[currentAnimalIndex]}"
+        } else {
+            // Show congrats card view and hide dragon image
+            congratsCardView.visibility = View.VISIBLE
+
+
+        }
     }
 }
-
