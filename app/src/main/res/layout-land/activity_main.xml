@@ -7,14 +7,14 @@
     tools:context=".MainActivity"
     android:background="@drawable/img">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnJugar"
-        android:layout_width="450dp"
-        android:layout_height="120dp"
-        android:autoSizeTextType="uniform"
-        android:backgroundTint="#F9BF55"
+        android:layout_width="435dp"
+        android:layout_height="160dp"
+        android:background="@drawable/cuadro"
         android:text="JUGAR"
         android:textColor="@color/black"
+        android:textSize="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,16 +23,16 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="739dp"
-        android:layout_height="219dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="895dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="32dp"
         android:autoSizeTextType="uniform"
         android:text="@string/la_llegenda_de_sant_jordi"
         android:textColor="@color/black"
         android:textSize="50dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -1,17 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/sopaletras"
+    tools:context=".Games.Game05"
+    tools:ignore="MissingDefaultResource"
+    tools:layout_editor_absoluteX="19dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <!-- Repite este patrón para cada palabra faltante -->
+
+    <TextView
+        android:id="@+id/songTextView"
+        android:layout_width="707dp"
+        android:layout_height="768dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#A6FFFFFF"
+        android:text="SANT JORDI, LA ________, LA ROSA I EL DRAC,\nDOS VAN AL DARRERE, DOS VAN AL DAVANT. (BIS)\n\nSANT JORDI ÉS TOT DE _____, LA ____ ÉS D’UN JARDÍ,\nEL DRAC NO MENJA POMES, LA PRINCESETA SÍ.\nSI! SI! SI! SI! SI!\nSANT JORDI ÉS TOT DE FERRO, LA ROSA ÉS D’UN _____.\n\nEL DRAC TÉ MOLTA GANA, JA ÉS HORA DE DINAR,\nS’EMPASSA TRES GALLINES AMB UN BON TROS DE PA.\nPA! PA! PA! PA! PA!\nEL ____ TÉ MOLTA GANA, JA ÉS HORA DE DINAR.\n\nLA ROSA I LA PRINCESA SÓN MOLT BONES AMIGUES,\nPERÒ MAI NO ES FAN PETONS PER POR DE LES ESPINES.\nUI! UI! UI! UI! UI!\nLA ROSA I LA PRINCESA SÓN MOLT BONES _______.\n\nSANT JORDI, LA PRINCESA, LA ROSA I EL DRAC,\nDOS VAN AL DARRERE, DOS VAN AL ______. (BIS)"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/word1EditText"
+        android:layout_width="326dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+
+        android:background="#A6FFFFFF"
+        android:hint="Palabra faltante 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toEndOf="@+id/songTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/word2EditText"
+        android:layout_width="317dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+
+        android:background="#A6FFFFFF"
+        android:hint="Palabra faltante 7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toEndOf="@+id/songTextView"
+        app:layout_constraintTop_toBottomOf="@+id/word1EditText" />
+
+    <EditText
+        android:id="@+id/word3EditText"
+        android:layout_width="317dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+
+        android:background="#A6FFFFFF"
+        android:hint="Palabra faltante 6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toEndOf="@+id/songTextView"
+        app:layout_constraintTop_toBottomOf="@+id/word2EditText" />
+
+    <EditText
+        android:id="@+id/word4EditText"
+        android:layout_width="310dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+
+        android:background="#A6FFFFFF"
+        android:hint="Palabra faltante 5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toEndOf="@+id/songTextView"
+        app:layout_constraintTop_toBottomOf="@+id/word3EditText" />
+
+    <EditText
+        android:id="@+id/word5EditText"
+        android:layout_width="302dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="#A6FFFFFF"
+
+        android:hint="Palabra faltante 4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toEndOf="@+id/songTextView"
+        app:layout_constraintTop_toBottomOf="@+id/word4EditText" />
 
     <ImageButton
-        android:id="@+id/btnHome_game05"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:id="@+id/btnHome_game04"
+        android:layout_width="167dp"
+        android:layout_height="161dp"
         android:layout_marginStart="12dp"
+
         android:layout_marginTop="16dp"
         android:background="@drawable/cuadro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_return" />
+
+    <EditText
+        android:id="@+id/word6EditText"
+        android:layout_width="317dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+
+        android:background="#A6FFFFFF"
+        android:hint="Palabra faltante 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toEndOf="@+id/songTextView"
+        app:layout_constraintTop_toBottomOf="@+id/word5EditText" />
+
+    <EditText
+        android:id="@+id/word7EditText"
+        android:layout_width="326dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginEnd="16dp"
+        android:background="#A6FFFFFF"
+        android:hint="Palabra faltante 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toEndOf="@+id/songTextView"
+        app:layout_constraintTop_toBottomOf="@+id/word6EditText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/checkButton"
+        android:layout_width="258dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/cuadro"
+        android:text="Verificar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toEndOf="@+id/songTextView" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/congratsCardView"
+        android:layout_width="710dp"
+        android:layout_height="417dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="710dp"
+                android:layout_height="139dp"
+                android:layout_gravity="center"
+                android:text="¡ENHORABONA HAS GUANYAT UNA ESTRELLA"
+                android:textAlignment="center"
+                app:autoSizeTextType="uniform" />
+
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
+                app:srcCompat="@drawable/ic_star_on" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nextLevelButton"
+                android:layout_width="610dp"
+                android:layout_height="87dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#FFC107"
+                android:text="SEGUENT NIVELL"
+                app:autoSizeTextType="uniform" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

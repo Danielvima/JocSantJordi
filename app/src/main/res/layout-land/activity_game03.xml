@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_cueva">
+    android:background="@drawable/fondo_cueva"
+    tools:ignore="MissingDefaultResource">
 
     <ImageButton
         android:id="@+id/btnHome_game03"
@@ -38,49 +39,51 @@
 
     <ImageView
         android:id="@+id/animal1ImageView"
-        android:layout_width="232dp"
-        android:layout_height="240dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintStart_toEndOf="@+id/dragonImageView"
-        app:layout_constraintTop_toBottomOf="@+id/animal3ImageView"
-        tools:src="@drawable/animal_cerdo" />
+        android:layout_width="304dp"
+        android:layout_height="188dp"
+        android:src="@drawable/animal_cerdo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612" />
 
     <ImageView
         android:id="@+id/animal2ImageView"
-        android:layout_width="268dp"
-        android:layout_height="237dp"
-        android:layout_marginBottom="240dp"
+        android:layout_width="257dp"
+        android:layout_height="276dp"
+        android:src="@drawable/animal_caballo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
-        app:layout_constraintStart_toEndOf="@+id/animal1ImageView"
-        tools:src="@drawable/animal_gallina" />
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.114" />
 
     <ImageView
         android:id="@+id/animal3ImageView"
-        android:layout_width="230dp"
-        android:layout_height="247dp"
-        android:layout_marginStart="56dp"
+        android:layout_width="318dp"
+        android:layout_height="252dp"
+        android:src="@drawable/animal_oveja"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.008"
-        app:layout_constraintStart_toEndOf="@+id/dragonImageView"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.061"
-        tools:src="@drawable/animal_caballo" />
+        app:layout_constraintVertical_bias="0.653" />
 
     <ImageView
         android:id="@+id/animal4ImageView"
-        android:layout_width="261dp"
-        android:layout_height="249dp"
-        app:layout_constraintBottom_toTopOf="@+id/animal2ImageView"
+        android:layout_width="355dp"
+        android:layout_height="324dp"
+        android:src="@drawable/animal_gallina"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
-        app:layout_constraintStart_toEndOf="@+id/animal3ImageView"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436"
-        tools:src="@drawable/animal_oveja" />
+        app:layout_constraintVertical_bias="0.052" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/checkButton"
@@ -92,9 +95,74 @@
         android:textSize="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintHorizontal_bias="0.817"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animal1ImageView"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/congratsCardView"
+        android:layout_width="710dp"
+        android:layout_height="417dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="710dp"
+                android:layout_height="139dp"
+                android:layout_gravity="center"
+                android:text="¡ENHORABONA HAS GUANYAT UNA ESTRELLA"
+                android:textAlignment="center"
+                app:autoSizeTextType="uniform" />
+
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
+                app:srcCompat="@drawable/ic_star_on" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nextLevelButton"
+                android:layout_width="610dp"
+                android:layout_height="87dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#FFC107"
+                android:text="SEGUENT NIVELL"
+                app:autoSizeTextType="uniform" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

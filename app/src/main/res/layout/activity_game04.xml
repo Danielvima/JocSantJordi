@@ -103,18 +103,19 @@
         app:layout_constraintStart_toStartOf="parent">
 
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/answer1"
             android:layout_width="641dp"
             android:layout_height="100dp"
             android:backgroundTint="#FDD353"
             android:textColor="@color/black"
+
             android:textSize="20sp"
             android:textStyle="bold"
             app:autoSizeTextType="uniform" />
 
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/answeer2"
             android:layout_width="614dp"
             android:layout_height="100dp"
@@ -125,7 +126,7 @@
             app:autoSizeTextType="uniform" />
 
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/answer3"
             android:layout_width="637dp"
             android:layout_height="100dp"
@@ -136,7 +137,7 @@
             app:autoSizeTextType="uniform" />
 
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/answer4"
             android:layout_width="614dp"
             android:layout_height="100dp"
