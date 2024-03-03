@@ -1,14 +1,12 @@
 package com.villalobosmarin.jocsantjordi.Games
 
-
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
 import android.widget.Button
-import android.widget.GridLayout
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
@@ -25,17 +23,20 @@ class Game04 : AppCompatActivity() {
         R.drawable.princesa_1 to "PRINCESA",
         R.drawable.caballero_cv to "SANTJORDI",
         R.drawable.rosa_cv to "ROSA",
-        R.drawable.book_btn to "LLIBRE"
-    )
+        R.drawable.rei_cv to "REI",
+        R.drawable.libro_img to "LLIBRE",
+        R.drawable.animal_gallina to "GALLINA"
+        )
 
-    private val incorrectWords = listOf("CASA", "PILOTA", "JOC", "ARBRE", "GOS")
+    private val incorrectWords = listOf("CASA", "PILOTA", "JOC", "ARBRE", "GOS", "GAT", "SOL", "LLAMP","MAR","PEIX")
     private lateinit var answerButtons: List<Button>
     private lateinit var randomImageView: ImageView
     private lateinit var dragonHealthTextView: TextView
     private lateinit var caballeroHealthTextView: TextView
     private lateinit var starImageView: ImageView
+    private lateinit var mediaPlayer: MediaPlayer
 
-    private var dragonHealth = 100
+    private var dragonHealth = 220
     private var caballeroHealth = 100
     private var stars = 0
 
@@ -43,12 +44,13 @@ class Game04 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game04)
 
-        val btnHome = findViewById<ImageButton>(R.id.btnHome_game04)
-
+        val btnHome = findViewById<ImageButton>(R.id.btnHome_game05)
         btnHome.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, map_view::class.java)
             startActivity(intent)
         }
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.atck_sound)
 
         answerButtons = listOf(
             findViewById(R.id.answer1),
@@ -84,6 +86,7 @@ class Game04 : AppCompatActivity() {
                 } else {
                     reduceCaballeroHealth()
                 }
+                playSound()
                 showNextRandomImage()
             }
         }
@@ -92,7 +95,6 @@ class Game04 : AppCompatActivity() {
     private fun reduceDragonHealth() {
         dragonHealth -= 40
         if (dragonHealth <= 0) {
-            // El dragón ha perdido, muestra un diálogo de alerta
             val finishcv = findViewById<CardView>(R.id.finishcv)
             finishcv.visibility = View.VISIBLE
             val nextLevelButton = findViewById<Button>(R.id.nextLevelButton)
@@ -108,7 +110,6 @@ class Game04 : AppCompatActivity() {
     private fun reduceCaballeroHealth() {
         caballeroHealth -= 40
         if (caballeroHealth <= 0) {
-            // El caballero ha perdido, muestra un mensaje y reinicia el juego
             showGameOverAlert()
         }
         caballeroHealthTextView.text = caballeroHealth.toString()
@@ -132,8 +133,7 @@ class Game04 : AppCompatActivity() {
     }
 
     private fun resetGame() {
-        // Reinicia la salud del dragón y el caballero, así como cualquier otro estado del juego
-        dragonHealth = 100
+        dragonHealth = 220
         caballeroHealth = 100
         dragonHealthTextView.text = dragonHealth.toString()
         caballeroHealthTextView.text = caballeroHealth.toString()
@@ -150,4 +150,9 @@ class Game04 : AppCompatActivity() {
         editor.apply()
         starImageView.setImageResource(if (stars >= 1) R.drawable.ic_star_on else R.drawable.ic_star_off)
     }
+
+    private fun playSound() {
+        mediaPlayer.start()
+    }
 }
+

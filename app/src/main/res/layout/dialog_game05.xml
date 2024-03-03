@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16px">
 
     <ImageView
-        android:id="@+id/reloadImage4"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:id="@+id/starView05"
+        android:layout_width="256dp"
+        android:layout_height="260dp"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="16dp"
         android:layout_weight="1"
@@ -18,21 +20,21 @@
         android:src="@drawable/ic_star_off"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/playButton4"
-        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintHorizontal_bias="0.017"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/dialogTitle4"
-        android:layout_width="1256dp"
+        android:id="@+id/starView05"
+        android:layout_width="0dp"
         android:layout_height="394dp"
         android:layout_marginTop="16dp"
-        android:text="OMPLE ELS ESPAIS VUITS DE LA CANÇÓ"
+        android:text="OMPLE ELS ESPAIS VUITS DE LA CANÇÓ DE SANT JORDI"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/reloadImage4"
+        app:layout_constraintBottom_toTopOf="@+id/playButton4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />

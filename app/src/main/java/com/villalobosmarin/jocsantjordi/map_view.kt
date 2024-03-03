@@ -2,8 +2,10 @@ package com.villalobosmarin.jocsantjordi
 
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -13,15 +15,18 @@ import com.villalobosmarin.jocsantjordi.Games.Game02
 import com.villalobosmarin.jocsantjordi.Games.Game03
 import com.villalobosmarin.jocsantjordi.Games.Game04
 import com.villalobosmarin.jocsantjordi.Games.Game05
+import com.villalobosmarin.jocsantjordi.Games.Game06
 import com.villalobosmarin.jocsantjordi.bookReader.BookReader
 
 class map_view : AppCompatActivity() {
+
+    private lateinit var mediaPlayer: MediaPlayer
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map_view)
 
-        val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        val stars = sharedPrefs.getInt("stars", 0)
+        mediaPlayer = MediaPlayer.create(this, R.raw.menu_click_sound)
 
         val bookImageView = findViewById<ImageView>(R.id.imageView19)
 
@@ -35,29 +40,36 @@ class map_view : AppCompatActivity() {
         val Buttonlvl3 = findViewById<Button>(R.id.Btnlvl3)
         val Buttonlvl4 = findViewById<Button>(R.id.Btnlvl4)
         val Buttonlvl5 = findViewById<Button>(R.id.Btnlvl5)
+        val Buttonlvl6 = findViewById<Button>(R.id.Btnlvl6)
         val btnHome = findViewById<ImageButton>(R.id.btnHome)
 
         Buttonlvl1.setOnClickListener {
-            showGameDialog01("NIVEL 1")
+            playSound()
+            showGameDialog01("NIVELL 1")
         }
-
         Buttonlvl2.setOnClickListener {
-            showGameDialog02("NIVEL 2")
+            playSound()
+            showGameDialog02("NIVELL 2")
         }
-
         Buttonlvl3.setOnClickListener {
-            showGameDialog03("NIVEL 3")
+            playSound()
+            showGameDialog03("NIVELL 3")
         }
-
         Buttonlvl4.setOnClickListener {
-            showGameDialog04("NIVEL 4")
+            playSound()
+            showGameDialog04("NIVELL 4")
         }
-
         Buttonlvl5.setOnClickListener {
-            showGameDialog05("NIVEL 5")
+            playSound()
+            showGameDialog05("NIVELL 5")
+        }
+        Buttonlvl6.setOnClickListener {
+            playSound()
+            showGameDialog06("NIVELL 6")
         }
 
         btnHome.setOnClickListener {
+            playSound()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
@@ -69,6 +81,9 @@ class map_view : AppCompatActivity() {
             .setView(dialogView)
             .setTitle(title)
         val dialog = dialogBuilder.create()
+
+        val starImageView = dialogView.findViewById<ImageView>(R.id.starView01)
+        stars(dialogView, starImageView)
 
         dialogView.findViewById<Button>(R.id.playButton).setOnClickListener {
             dialog.dismiss()
@@ -88,15 +103,8 @@ class map_view : AppCompatActivity() {
             .setTitle(title)
         val dialog = dialogBuilder.create()
 
-        val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        val starFilled = sharedPrefs.getBoolean("starFilled", false)
-
-        val starImageView = dialogView.findViewById<ImageView>(R.id.starView)
-        if (starFilled) {
-            starImageView.setImageResource(R.drawable.ic_star_on)
-        } else {
-            starImageView.setImageResource(R.drawable.ic_star_off)
-        }
+        val starImageView = dialogView.findViewById<ImageView>(R.id.starView02)
+        stars(dialogView, starImageView)
 
         dialogView.findViewById<Button>(R.id.playButton).setOnClickListener {
             dialog.dismiss()
@@ -109,13 +117,15 @@ class map_view : AppCompatActivity() {
         dialog.show()
     }
 
-
     private fun showGameDialog03(title: String) {
         val dialogView = layoutInflater.inflate(R.layout.dialog_game03, null)
         val dialogBuilder = AlertDialog.Builder(this)
             .setView(dialogView)
             .setTitle(title)
         val dialog = dialogBuilder.create()
+
+        val starImageView = dialogView.findViewById<ImageView>(R.id.starView03)
+        stars(dialogView, starImageView)
 
         dialogView.findViewById<Button>(R.id.playButton).setOnClickListener {
             dialog.dismiss()
@@ -135,15 +145,8 @@ class map_view : AppCompatActivity() {
             .setTitle(title)
         val dialog = dialogBuilder.create()
 
-        val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        val starFilled = sharedPrefs.getBoolean("starFilled", false)
-
-        val starImageView = dialogView.findViewById<ImageView>(R.id.reloadImage)
-        if (starFilled) {
-            starImageView.setImageResource(R.drawable.ic_star_on)
-        } else {
-            starImageView.setImageResource(R.drawable.ic_star_off)
-        }
+        val starImageView = dialogView.findViewById<ImageView>(R.id.starView04)
+        stars(dialogView, starImageView)
 
         dialogView.findViewById<Button>(R.id.playButton).setOnClickListener {
             dialog.dismiss()
@@ -156,12 +159,16 @@ class map_view : AppCompatActivity() {
         dialog.show()
     }
 
+
     private fun showGameDialog05(title: String) {
         val dialogView = layoutInflater.inflate(R.layout.dialog_game05, null)
         val dialogBuilder = AlertDialog.Builder(this)
             .setView(dialogView)
             .setTitle(title)
         val dialog = dialogBuilder.create()
+
+        val starImageView = dialogView.findViewById<ImageView>(R.id.starView05)
+        stars(dialogView, starImageView)
 
         dialogView.findViewById<Button>(R.id.playButton4).setOnClickListener {
             dialog.dismiss()
@@ -172,6 +179,47 @@ class map_view : AppCompatActivity() {
         }
 
         dialog.show()
+    }
+
+    private fun showGameDialog06(title: String) {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_game06, null)
+        val dialogBuilder = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .setTitle(title)
+        val dialog = dialogBuilder.create()
+
+        val starImageView = dialogView.findViewById<ImageView>(R.id.starView06)
+        stars(dialogView, starImageView)
+
+        dialogView.findViewById<Button>(R.id.playButton2).setOnClickListener {
+            dialog.dismiss()
+
+            // Inicia la actividad Game06
+            val intent = Intent(this@map_view, Game06::class.java)
+            startActivity(intent)
+        }
+
+        dialog.show()
+    }
+
+    private fun stars(dialogView: View, starImageView: ImageView) {
+        val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val starFilled = sharedPrefs.getBoolean("starFilled", false)
+
+        if (starFilled) {
+            starImageView.setImageResource(R.drawable.ic_star_on)
+        } else {
+            starImageView.setImageResource(R.drawable.ic_star_off)
+        }
+    }
+
+    private fun playSound() {
+        mediaPlayer.start()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.release()
     }
 
 }

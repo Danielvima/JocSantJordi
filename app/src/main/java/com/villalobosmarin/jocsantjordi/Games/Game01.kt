@@ -2,6 +2,7 @@ package com.villalobosmarin.jocsantjordi.Games
 
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -9,13 +10,12 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import com.villalobosmarin.jocsantjordi.MainActivity
 import com.villalobosmarin.jocsantjordi.R
 import com.villalobosmarin.jocsantjordi.map_view
 
-
 class Game01 : AppCompatActivity() {
     private var currentTag = 4
+    private lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,9 +28,11 @@ class Game01 : AppCompatActivity() {
         val btnHome = findViewById<ImageButton>(R.id.btnHome_game01)
 
         btnHome.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, map_view::class.java)
             startActivity(intent)
         }
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.img_click_sound)
 
         val clickListener = View.OnClickListener { v ->
             val clickedImageView = v as ImageView
@@ -42,13 +44,12 @@ class Game01 : AppCompatActivity() {
                     showSuccessMessage()
 
                     val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-
                     val editor = sharedPrefs.edit()
-
                     editor.putBoolean("starFilled", true)
-
                     editor.apply()
                 }
+
+                playSound()
             }
         }
 
@@ -58,13 +59,16 @@ class Game01 : AppCompatActivity() {
         imageView4.setOnClickListener(clickListener)
     }
 
+    private fun playSound() {
+        mediaPlayer.start()
+    }
+
     private fun showSuccessMessage() {
 
         val congratsCardView = findViewById<CardView>(R.id.congratsCardView)
         congratsCardView.visibility = View.VISIBLE
         val nextLevelButton = findViewById<Button>(R.id.nextLevelButton)
         nextLevelButton.setOnClickListener {
-            // Ir al map_view
             val intent = Intent(this, map_view::class.java)
             startActivity(intent)
         }
@@ -74,10 +78,12 @@ class Game01 : AppCompatActivity() {
         val updatedStars = currentStars + 1
         with(sharedPrefs.edit()) {
             putInt("stars", updatedStars)
+            putBoolean("starFilled_1", true)
             apply()
         }
 
     }
 }
+
 
 
