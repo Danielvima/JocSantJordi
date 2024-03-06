@@ -37,10 +37,8 @@ class BookReader : AppCompatActivity() {
             findViewById(R.id.ll11),
             )
 
-        // Mostrar el primer layout, ocultar los demás
         showLayout(currentLayoutIndex)
 
-        // Configurar listeners para los botones de flecha
         findViewById<Button>(R.id.prevBtn).setOnClickListener { showPreviousLayout() }
         findViewById<Button>(R.id.avBtn).setOnClickListener { showNextLayout() }
     }

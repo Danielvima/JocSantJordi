@@ -8,7 +8,7 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/reloadImage"
+        android:id="@+id/starView04"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginBottom="4dp"
@@ -30,7 +30,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/reloadImage"
+        app:layout_constraintBottom_toTopOf="@+id/starView04"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

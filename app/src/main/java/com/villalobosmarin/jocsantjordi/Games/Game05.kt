@@ -1,14 +1,17 @@
 package com.villalobosmarin.jocsantjordi.Games
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.villalobosmarin.jocsantjordi.MainActivity
 import com.villalobosmarin.jocsantjordi.R
 import com.villalobosmarin.jocsantjordi.map_view
 
@@ -28,12 +31,16 @@ class Game05 : AppCompatActivity() {
         "PRINCESA", "FERRO", "ROSA", "JARDI", "DRAC", "AMIGUES", "DAVANT"
     )
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game05)
 
+        val btnHome = findViewById<ImageButton>(R.id.btnHome_game05)
 
+        btnHome.setOnClickListener {
+            val intent = Intent(this, map_view::class.java)
+            startActivity(intent)
+        }
         congratsCardView = findViewById(R.id.congratsCardView)
 
         word1EditText = findViewById(R.id.word1EditText)
@@ -79,10 +86,11 @@ class Game05 : AppCompatActivity() {
         }
 
         if (allCorrect) {
-
-
             congratsCardView.visibility = View.VISIBLE
-
+            val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPrefs.edit()
+            editor.putBoolean("starFilled", true)
+            editor.apply()
         } else {
             Toast.makeText(this, "Resposta incorrecta! Torna-ho a intentar", Toast.LENGTH_SHORT).show()
         }

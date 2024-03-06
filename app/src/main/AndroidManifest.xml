@@ -23,6 +23,7 @@
             android:exported="false" />
 
         <activity android:name=".Games.Game05" />
+        <activity android:name=".Games.Game06" />
 
         <activity
             android:name=".Games.Game02"
@@ -32,6 +33,9 @@
             android:exported="false" />
         <activity
             android:name=".map_view"
+            android:exported="false" />
+        <activity
+            android:name=".final"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -8,36 +8,38 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/starView02"
+        android:id="@+id/starView06"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
         android:layout_weight="1"
         android:adjustViewBounds="true"
         android:padding="8dp"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_star_off"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/playButton"
-        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintEnd_toStartOf="@+id/playButton2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/dialogTitle"
+        android:id="@+id/dialogTitle2"
         android:layout_width="0dp"
-        android:layout_height="400dp"
-        android:text="TROBA LES PARELLES PER GUANYAR ESTRELLES"
+        android:layout_height="378dp"
+        android:layout_marginTop="16dp"
+        android:text="TROBA TOTS ELS PERSONATGES AMAGATS"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/starView02"
+        app:layout_constraintBottom_toTopOf="@+id/starView06"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/playButton"
+        android:id="@+id/playButton2"
         android:layout_width="298dp"
         android:layout_height="160dp"
         android:layout_marginEnd="28dp"
@@ -49,6 +51,4 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-

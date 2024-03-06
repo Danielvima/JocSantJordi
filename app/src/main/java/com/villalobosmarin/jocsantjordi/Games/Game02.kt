@@ -2,6 +2,7 @@ package com.villalobosmarin.jocsantjordi.Games
 
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -11,7 +12,6 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import com.villalobosmarin.jocsantjordi.MainActivity
 import com.villalobosmarin.jocsantjordi.R
 import com.villalobosmarin.jocsantjordi.map_view
 
@@ -28,6 +28,7 @@ class Game02 : AppCompatActivity() {
     private var pairsFound = 0
     private var flippedCardsCount = 0
     private var isProcessing = false
+    private lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,22 +37,19 @@ class Game02 : AppCompatActivity() {
         initializeGame()
 
         val btnHome = findViewById<ImageButton>(R.id.btnHome_game02)
-
         btnHome.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, map_view::class.java)
             startActivity(intent)
         }
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.card_sound)
     }
 
     private fun initializeGame() {
-
         val duplicatedPairs = cardPairs.toList().flatMap { listOf(it, it) }
         cardPairs.clear()
         cardPairs.addAll(duplicatedPairs)
-
-
         cardPairs.shuffle()
-
 
         val gridLayout = findViewById<GridLayout>(R.id.gridLayout)
         for (i in 0 until gridLayout.childCount) {
@@ -62,8 +60,7 @@ class Game02 : AppCompatActivity() {
         }
     }
 
-
-    fun onCardClicked(view: android.view.View) {
+    fun onCardClicked(view: View) {
         if (isProcessing) return
 
         val imageView = view as ImageView
@@ -71,39 +68,31 @@ class Game02 : AppCompatActivity() {
 
         val clickedIndex = imageView.tag.toString().toInt()
 
-        if (lastClickedCard == null) {
+        playSound()
 
+        if (lastClickedCard == null) {
             lastClickedCard = imageView
             imageView.setImageResource(cardPairs[clickedIndex])
             imageView.isEnabled = false
             flippedCardsCount++
         } else {
-
             isProcessing = true
             imageView.setImageResource(cardPairs[clickedIndex])
             imageView.isEnabled = false
             flippedCardsCount++
 
             if (cardPairs[lastClickedCard!!.tag.toString().toInt()] == cardPairs[clickedIndex]) {
-
                 pairsFound++
                 if (pairsFound == cardPairs.size / 2) {
-
                     showSuccessMessage()
-
                     val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-
                     val editor = sharedPrefs.edit()
-
                     editor.putBoolean("starFilled", true)
-
                     editor.apply()
-
                 }
                 lastClickedCard = null
                 isProcessing = false
             } else {
-
                 Handler().postDelayed({
                     imageView.setImageResource(R.drawable.card_back)
                     imageView.isEnabled = true
@@ -112,26 +101,22 @@ class Game02 : AppCompatActivity() {
                     lastClickedCard = null
                     isProcessing = false
                 }, 1000)
-
             }
         }
     }
 
-
+    private fun playSound() {
+        mediaPlayer.start()
+    }
 
     private fun showSuccessMessage() {
-
-
         val congratsCardView = findViewById<CardView>(R.id.congratsCardView)
         congratsCardView.visibility = View.VISIBLE
         val nextLevelButton = findViewById<Button>(R.id.nextLevelButton)
         nextLevelButton.setOnClickListener {
-            // Ir al map_view
             val intent = Intent(this, map_view::class.java)
             startActivity(intent)
         }
-
-
 
         val sharedPrefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val currentStars = sharedPrefs.getInt("stars", 0)
@@ -140,9 +125,11 @@ class Game02 : AppCompatActivity() {
             putInt("stars", updatedStars)
             apply()
         }
-
     }
+
+
 }
+
 
 
 

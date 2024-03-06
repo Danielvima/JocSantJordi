@@ -23,29 +23,17 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="895dp"
-        android:layout_height="261dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="953dp"
+        android:layout_height="209dp"
+        android:layout_marginTop="44dp"
         android:autoSizeTextType="uniform"
         android:text="@string/la_llegenda_de_sant_jordi"
         android:textColor="@color/black"
         android:textSize="50dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btnConfig"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginEnd="28dp"
-        android:background="@drawable/cuadro"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053"
-        app:srcCompat="@drawable/gear_options" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
