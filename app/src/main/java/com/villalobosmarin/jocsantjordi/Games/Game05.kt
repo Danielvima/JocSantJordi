@@ -2,6 +2,7 @@ package com.villalobosmarin.jocsantjordi.Games
 
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,7 +12,6 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import com.villalobosmarin.jocsantjordi.MainActivity
 import com.villalobosmarin.jocsantjordi.R
 import com.villalobosmarin.jocsantjordi.map_view
 
@@ -26,6 +26,7 @@ class Game05 : AppCompatActivity() {
     private lateinit var word7EditText: EditText
     private lateinit var checkButton: Button
     private lateinit var congratsCardView: CardView
+    private lateinit var mediaPlayer: MediaPlayer
 
     private val correctWords = arrayOf(
         "PRINCESA", "FERRO", "ROSA", "JARDI", "DRAC", "AMIGUES", "DAVANT"
@@ -35,12 +36,23 @@ class Game05 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game05)
 
-        val btnHome = findViewById<ImageButton>(R.id.btnHome_game05)
+        // Inicializar el reproductor multimedia con la canción
+        mediaPlayer = MediaPlayer.create(this, R.raw.stjordicancion)
 
+        val btnHome = findViewById<ImageButton>(R.id.btnHome_game05)
         btnHome.setOnClickListener {
             val intent = Intent(this, map_view::class.java)
             startActivity(intent)
         }
+
+        val playButton = findViewById<ImageButton>(R.id.playButton)
+
+        playButton.setOnClickListener {
+            playSong(it)
+        }
+
+
+
         congratsCardView = findViewById(R.id.congratsCardView)
 
         word1EditText = findViewById(R.id.word1EditText)
@@ -61,9 +73,18 @@ class Game05 : AppCompatActivity() {
             val intent = Intent(this, map_view::class.java)
             startActivity(intent)
         }
-
-
     }
+
+    // Función para reproducir la canción
+    // Función para reproducir o detener la canción
+    fun playSong(view: View) {
+        if (mediaPlayer.isPlaying) {
+            mediaPlayer.pause()
+        } else {
+            mediaPlayer.start()
+        }
+    }
+
 
     private fun checkAnswers() {
         val userAnswers = arrayOf(
@@ -96,6 +117,11 @@ class Game05 : AppCompatActivity() {
         }
     }
 
-
+    // Asegúrate de liberar el reproductor cuando tu actividad se detiene
+    override fun onStop() {
+        super.onStop()
+        mediaPlayer.release()
+    }
 }
+
 
